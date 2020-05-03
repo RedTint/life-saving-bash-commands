@@ -95,5 +95,3 @@ drwxr-xr-x   7 redtint  admin   224B Oct 11  2018 exercise-13
 drwxr-xr-x   5 redtint  admin   160B Oct 11  2018 exercise-14
 drwxr-xr-x   3 redtint  admin    96B Oct 11  2018 implementations
 ```
-
-**Output:**
