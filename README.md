@@ -1,4 +1,5 @@
 # Life Saving Bash Commands
+This repository contains some of the useful and life saving bash commands I have used through the years. Feel free to **star** as this will be updated when I use another bash command and feel that it should be included in this list. :)
 
 ## 1. Current Directory Size
 **Purpose:** So, you wanted to clean up? This command is useful for showing your current folder's list of directories and their sizes.
@@ -25,6 +26,10 @@ $ du -sch ./*
 **Command:**
 ```
 find . -name <filename>
+
+# e.g: 
+find . -name "Screen*"
+find . -name "my-long-lost-dog.jpg"
 ```
 
 **Output:**
@@ -95,3 +100,31 @@ drwxr-xr-x   7 redtint  admin   224B Oct 11  2018 exercise-13
 drwxr-xr-x   5 redtint  admin   160B Oct 11  2018 exercise-14
 drwxr-xr-x   3 redtint  admin    96B Oct 11  2018 implementations
 ```
+
+# 4. Updating your Environment Variables with a File
+**Purpose:** You may be deploying a project and received a file that looks like this: 
+```
+API_PORT=3000
+APP_PORT=80
+DOMAIN=life-saving.bash-commands.com
+DB_NAME=life-saving-bash-commands
+DB_ADMIN_USER=root
+DB_ADMIN_PASS=password
+DB_READONLY_USER=life-saving-bash-commands
+DB_READONLY_PASS=password
+DB_WRITE_USER=life-saving-bash-commands
+DB_WRITE_PASS=password
+```
+This command helps you export all these environment variables from your file in one go.
+BONUS: You can use `printenv` to review your environment variables.
+
+**Command:**
+```
+export $(cat <filename>)
+
+e.g: 
+export $(cat .env)
+```
+
+**Output**
+![printenv screenshot](images/01-printenv.jpg)
