@@ -128,3 +128,21 @@ export $(cat .env)
 
 **Output**
 ![printenv screenshot](images/01-printenv.jpg)
+
+# 5. The almighty `screen` tool
+**Purpose:** Are you wondering how you'll be able to handle multiple sessions in your application. Let's say, run a Node API, ngrok to expose it, and another service at the same time.
+
+Well, `screen` solves this problem for you.
+
+**Basic Commands:**
+1. `screen` - creates a new window with your terminal. You can run a service inside this window and shouldn't affect any other running service.
+2. `screen -ls` - displays the list of screen sessions available.
+3. `screen -X -S <session-name> kill` - destroys/kills a session. All running services will be down afterwards.
+4. `screen -r <session-id> - reattaches yourself to a specific session-id.
+
+**Inside a Screen Window Commands:**
+1. `Ctrl + a + d` - This will detach your from your current screen session. Meaning, you will exit screen and be able to continue with in your main terminal. NOTE: Your screen session is still up, and the services you ran inside the screen session are still running. 
+2. `Ctrl + a + k` - This kills/closes the window you are currently on.
+3. `Ctrl + a + c` - Creates a new window with a terminal.
+4. `Ctrl + a + n` - Displays the next window in your current screen session.
+5. `Ctrl + a + p` - Displays the previous window in your current screen session.
