@@ -146,3 +146,11 @@ Well, `screen` solves this problem for you.
 3. `Ctrl + a + c` - Creates a new window with a terminal.
 4. `Ctrl + a + n` - Displays the next window in your current screen session.
 5. `Ctrl + a + p` - Displays the previous window in your current screen session.
+
+# 6. Search and Replace Text in a File
+**Purpose** As it already says, this command should replace the "text" in your file with "new_text".
+
+**Command:**
+```
+sed -i -e 's/text/new_text/' your_file.txt
+```
